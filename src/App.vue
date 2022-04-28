@@ -2,7 +2,7 @@
   <v-app id="inspire">
     <MyDrawer :drawer="drawer"/>
     <v-app-bar
-     app
+      app
       absolute
       color="#6A76AB"
       dark
@@ -19,7 +19,7 @@
 
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-app-bar-title class="title-font-size">GOOD RECIPES</v-app-bar-title>
+      <v-app-bar-title class="title-font-size">FIND GOOD RECIPES</v-app-bar-title>
 
       <v-spacer></v-spacer>
 
@@ -38,15 +38,13 @@
       <template v-slot:extension>
         <v-tabs align-with-title>
           <v-tab @click.native="$router.push('/')">Home</v-tab>
-          <v-tab @click.native="$router.push('/fridge')">What is left in your fridge?</v-tab>
+          <v-tab @click.native="$router.push('/low-calories')">Do you want to lose weight?</v-tab>
           </v-tabs>
       </template>
     </v-app-bar>
 
     <v-main>
-      <keep-alive>
         <router-view></router-view>
-      </keep-alive>
     </v-main>
     <MyFooter />
   </v-app>

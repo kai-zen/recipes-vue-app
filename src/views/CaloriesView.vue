@@ -1,5 +1,5 @@
 <template>
-    <div class="fridge-page">
+    <div class="calories-page">
         <h2>Here are foods with least amount of calories:</h2>
         <v-row>
             <v-col
@@ -27,7 +27,7 @@
 import SingleCard from '../components/SingleCard.vue';
 import axios from 'axios'
   export default {
-    name: 'Home',
+    name: 'Calories',
     data () {
       return {
         page: 1,
@@ -36,9 +36,8 @@ import axios from 'axios'
     },
     methods: {
       getFoods() {
-        axios.get('https://api.spoonacular.com/recipes/complexSearch?apiKey=336ee5af15ce4d0b837d78e1a1d16497&number=20&maxCalories=200').then((response)=>{
+        axios.get('https://api.spoonacular.com/recipes/complexSearch?apiKey=17452c198e9f483698f51db4856986e6&number=20&maxCalories=200').then((response)=>{
           this.foods = response.data.results.sort(() => Math.random() - 0.5)
-          console.log(response)
         }).catch((err)=>{
           console.log(err)
         })
@@ -52,7 +51,7 @@ import axios from 'axios'
 </script>
 
 <style scoped>
-.fridge-page{
+.calories-page{
     padding: 20px 10%;
 }
 </style>

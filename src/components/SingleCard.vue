@@ -2,6 +2,7 @@
   <v-card
     class="mx-auto my-12"
     max-width="374"
+    @click.native="$router.push(`/single-food/${food.id}`)"
   >
     <template slot="progress">
       <v-progress-linear
@@ -55,8 +56,6 @@
         column
       >
         <v-chip>onion</v-chip>
-        <v-chip>potatoe</v-chip>
-        <v-chip>meatball</v-chip>
         <v-chip>egg</v-chip>
         <v-chip>tomato</v-chip>
       </v-chip-group>
@@ -81,9 +80,12 @@
 </script>
 
 <style>
-.card-title{
+  .v-card__title{
+    text-overflow: ellipsis;
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis !important;
-    white-space: nowrap !important;
-}
+  }
+  .v-card{
+    cursor: pointer;
+  }
 </style>
