@@ -38,7 +38,7 @@
       <template v-slot:extension>
         <v-tabs align-with-title>
           <v-tab @click.native="$router.push('/')">Home</v-tab>
-          <v-tab @click.native="$router.push('/low-calories')">Do you want to lose weight?</v-tab>
+          <v-tab @click.native="$router.push('/low-calories')">Want to lose weight?</v-tab>
           </v-tabs>
       </template>
     </v-app-bar>
@@ -69,7 +69,8 @@ import MyFooter from './components/MyFooter.vue';
     text-overflow: clip !important;
   }
   .title-font-size {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
     font-weight: bold;
+    padding-left: 0px !important;
   }
 </style>
